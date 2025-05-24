@@ -42,6 +42,12 @@
             "show_inventory_quantity": true
           }
         },
+        "custom_liquid_BEL7fe": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.tags contains \"pre-order\" %}\n  <div class=\"custom-options\">\n    <label for=\"engraving_name\">刻印する名前:</label>\n    <input type=\"text\" id=\"engraving_name\" name=\"properties[Engraving Name]\" placeholder=\"例: テスト名前\" required>\n    <br>\n    \n    <label for=\"delivery_date\">配送指定日:</label>\n    <input type=\"date\" id=\"delivery_date\" name=\"properties[Delivery Date]\" required>\n  </div>\n{% endif %}"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -70,6 +76,7 @@
         "price",
         "variant_picker",
         "inventory_78XQGx",
+        "custom_liquid_BEL7fe",
         "quantity_selector",
         "buy_buttons",
         "description",
