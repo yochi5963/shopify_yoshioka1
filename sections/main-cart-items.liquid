@@ -125,6 +125,32 @@
                         </div>
                       {%- endif -%}
 
+                      {% comment %} ほげ１ ================ {% endcomment %}
+    {% if item.properties %}
+
+      <ul class="custom-properties">
+        {% if item.properties['Engraving Name'] %}
+          <li><strong>刻印する名前:</strong> {{ item.properties['Engraving Name'] }}</li>
+        {% endif %}
+        {% if item.properties['Delivery Date'] %}
+          <li><strong>配送指定日:</strong> {{ item.properties['Delivery Date'] }}</li>
+        {% endif %}
+      </ul>
+    {% endif %}
+
+{% comment %} ほげ２ ================ {% endcomment %}
+{% if product.tags contains "pre-order" %}
+  <div class="custom-options">
+
+    <label for="engraving_name">刻印する名前:</label>
+    <input type="text" id="engraving_name" name="properties[Engraving Name]" placeholder="例: テスト名前" required>
+    <br>
+    
+    <label for="delivery_date">配送指定日:</label>
+    <input type="date" id="delivery_date" name="properties[Delivery Date]" required>
+  </div>
+{% endif %}
+                  
                       {%- if item.product.has_only_default_variant == false
                         or item.properties.size != 0
                         or item.selling_plan_allocation != null
