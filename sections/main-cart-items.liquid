@@ -125,6 +125,7 @@
                         </div>
                       {%- endif -%}
 
+                      カスタムリキッド　ここから
                       {% comment %} ほげ１ ================ {% endcomment %}
     {% if item.properties %}
 
@@ -150,6 +151,7 @@
     <input type="date" id="delivery_date" name="properties[Delivery Date]" required>
   </div>
 {% endif %}
+                      カスタムリキッド　ここまで
                   
                       {%- if item.product.has_only_default_variant == false
                         or item.properties.size != 0
