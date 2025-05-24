@@ -152,6 +152,16 @@
   </div>
 {% endif %}
                       ================ カスタムリキッド ここまで ================
+{% if item.properties %}
+  <ul class="custom-properties">
+    {% for property in item.properties %}
+      {% unless property.last == blank %}
+        <li><strong>{{ property.first }}:</strong> {{ property.last }}</li>
+      {% endunless %}
+    {% endfor %}
+  </ul>
+{% endif %}
+                      ================ カスタムリキッド ここまで ４================
                   
                       {%- if item.product.has_only_default_variant == false
                         or item.properties.size != 0
