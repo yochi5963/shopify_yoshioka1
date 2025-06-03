@@ -45,7 +45,7 @@
         "custom_liquid_BEL7fe": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% if product.tags contains \"pre-order\" %}\n  <div class=\"custom-options\">\n    <label for=\"engraving_name\">刻印する名前（その１x）:</label>\n    <input type=\"text\" id=\"engraving_name\" name=\"properties[刻印する名前ラベル]\" placeholder=\"例: テスト名前\" \n\nform=\"product-form-{{ section.id }}\"\n \nrequired>\n    <br>\n    \n    <label for=\"delivery_date\">配送指定日:</label>\n    <input type=\"date\" id=\"delivery_date\" name=\"properties[Delivery Date]\" \nform=\"product-form-{{ section.id }}\nrequired>\n  </div>\n{% endif %}"
+            "custom_liquid": "{% if product.tags contains \"pre-order\" %}\n  <div class=\"custom-options\">\n    <label for=\"engraving_name\">刻印する名前（その１）:</label>\n    <input type=\"text\" id=\"engraving_name\" name=\"properties[刻印する名前ラベル]\" placeholder=\"例: テスト名前\" \n\nform=\"product-form-{{ section.id }}\"\n \nrequired>\n    <br>\n    \n    <label for=\"delivery_date\">配送指定日:</label>\n    <input type=\"date\" id=\"delivery_date\" name=\"properties[Delivery Date]\" \nform=\"product-form-{{ section.id }}\nrequired>\n  </div>\n{% endif %}"
           }
         },
         "quantity_selector": {
