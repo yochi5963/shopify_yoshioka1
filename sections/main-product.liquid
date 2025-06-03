@@ -208,7 +208,9 @@
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
               {%- when 'custom_liquid' -%}
+                <span style="color: red;">-- GUIで入れた カスタムリキッド ----</span>
                 {{ block.settings.custom_liquid }}
+                <span style="color: red;"> -- ここまで ----------------------------</span>
               {%- when 'collapsible_tab' -%}
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                   <details id="Details-{{ block.id }}-{{ section.id }}">

@@ -43,6 +43,19 @@
         novalidate: 'novalidate',
         data-type: 'add-to-cart-form'
       -%}
+
+        <span style="color: red;">-- VSCoded で入れた カスタムスニペット ----</span>
+        {% if product.tags contains "pre-order" %}
+          <div class="custom-options">
+            <label for="engraving_name">刻印する名前(その2):</label>
+            <input type="text" id="engraving_name2" name="properties[engraving_name2]" placeholder="例: テスト名前" required>
+            <br>
+            <label for="delivery_date">配送指定日(その2):</label>
+            <input type="date" id="delivery_date2" name="properties[delivery_date2]" required>
+          </div>
+        {% endif %}
+        <span style="color: red;"> -- ここまで ----------------------------</span>
+
         <input
           type="hidden"
           name="id"
@@ -56,7 +69,7 @@
           class="product-variant-id"
         >
 
-        {%- if gift_card_recipient_feature_active -%}
+          {%- if gift_card_recipient_feature_active -%}
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
         {%- endif -%}
 
